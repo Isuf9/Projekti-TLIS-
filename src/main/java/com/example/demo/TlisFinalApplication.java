@@ -12,7 +12,4 @@ public class TlisFinalApplication {
 
     }
 
-    public void setHelloWorld(){
-        System.out.println("Hello world from me");
-    }
 }
