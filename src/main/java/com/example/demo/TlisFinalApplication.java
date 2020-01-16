@@ -12,7 +12,4 @@ public class TlisFinalApplication {
 
     }
 
-    public String getEmri(){
-        return "Arlind";
-    }
 }
