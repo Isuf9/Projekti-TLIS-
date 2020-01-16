@@ -1,7 +1,10 @@
 package com.example.demo.Model;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Automobili {
-    private int nrTargat;
+    private String nrTargat;
     private String llojiAutomjetit;
     private String tipiAutomjetit;
     private String pronariAutomjetit;
@@ -9,11 +12,19 @@ public class Automobili {
     private int shpejtesia;
     private boolean isInInto;
 
-    public int getNrTargat(){
+    Automobili(){
+
+    }
+
+    Automobili(String llojiAutomjetit){
+        this.llojiAutomjetit = llojiAutomjetit;
+    }
+
+    public String getNrTargat(){
         return nrTargat;
     }
 
-    public void setNrTargat(int nrTargat){
+    public void setNrTargat(String nrTargat){
         this.nrTargat = nrTargat;
     }
 
@@ -64,4 +75,9 @@ public class Automobili {
     public void setInInto(boolean inInto) {
         isInInto = inInto;
     }
+
+    public String posedon(String targa){
+        return "";
+    }
+
 }
