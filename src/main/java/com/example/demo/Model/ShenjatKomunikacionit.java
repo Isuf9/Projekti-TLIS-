@@ -11,11 +11,17 @@ public class ShenjatKomunikacionit {
         this.infoShtesShenja = infoShtesShenja;
     }
 
-//    public void shenjatRrugeRuale(int Id){}
-//
-//    public void shenjatRrugeLokale(int Id){}
-//
-//    public void shenjatRrugeAutostrade(int Id){}
+    public void shenjatRrugeRuale(int Id){
+        System.out.println("Ju jeni ne dekuke ngasur ne nje rruge Ruale");
+    }
+
+    public void shenjatRrugeLokale(int Id){
+        System.out.println("Ju jeni ne dekuke ngasur ne nje rruge ne Qytet");
+    }
+
+    public void shenjatRrugeAutostrade(int Id){
+        System.out.println("Ju jeni ne dekuke ngasur ne nje rruge Ruale");
+    }
 
     private String vendodhjaJuaj(int idRruges){
         return "ju jeni ne kete rruge ";
