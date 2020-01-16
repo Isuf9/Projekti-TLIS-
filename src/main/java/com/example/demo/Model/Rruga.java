@@ -5,11 +5,11 @@ import java.util.List;
 public class Rruga {
     static  int max;
     static ShenjatKomunikacionit[] shenjatKomunikacionit=new ShenjatKomunikacionit[max];
-    public int ID;
-    public String emriRruges;
-    public String lloijRruges;
-    public int ID_semaforit;
-    public List<Color> list;
+    private int ID;
+    private String emriRruges;
+    private String lloijRruges;
+    private int ID_semaforit;
+    private List<Color> list;
 
 
     void addShenja(ShenjatKomunikacionit sh){
