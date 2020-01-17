@@ -12,15 +12,15 @@ public class ShenjatKomunikacionit {
     }
 
     public void shenjatRrugeRuale(int Id){
-        System.out.println("Ju jeni ne dekuke ngasur ne nje rruge Ruale");
+        System.out.println("Ju jeni ne duke ngasur ne nje rruge Ruale");
     }
 
     public void shenjatRrugeLokale(int Id){
-        System.out.println("Ju jeni ne dekuke ngasur ne nje rruge ne Qytet");
+        System.out.println("Ju jeni ne duke ngasur ne nje rruge ne Qytet");
     }
 
     public void shenjatRrugeAutostrade(int Id){
-        System.out.println("Ju jeni ne dekuke ngasur ne nje rruge Ruale");
+        System.out.println("Ju jeni ne duke ngasur ne nje rruge Ruale");
     }
 
     private String vendodhjaJuaj(int idRruges){
