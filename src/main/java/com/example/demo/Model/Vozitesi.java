@@ -11,6 +11,7 @@ public class Vozitesi {
     private String mbiemri;
     private String shtetsia;
     private int nrL_Njoftimit;
+    public static   Vozitesi vozitesi;
     //key e kemi targat, value e kemi vozitesin
     Map<String,String> map = new HashMap<>();
 
@@ -20,6 +21,14 @@ public class Vozitesi {
         this.shtetsia=shtetsia;
         this.nrL_Njoftimit=nrL_Njoftimit;
     }
+    //Singleton pattern
+    public static Vozitesi getInstance(){
+        if (vozitesi==null){
+            vozitesi=new Vozitesi("Isuf","Bajraktaraj","Kosovar",000000001);
+        }
+        return vozitesi;
+    }
+
 
     public Map<String, String> getMap() {
         return map;
