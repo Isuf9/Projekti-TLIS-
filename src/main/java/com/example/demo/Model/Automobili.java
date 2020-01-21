@@ -12,11 +12,11 @@ public class Automobili {
     private int shpejtesia;
     private boolean isInInto;
 
-    Automobili(){
+    public Automobili(){
 
     }
 
-    Automobili(String llojiAutomjetit){
+    public Automobili(String llojiAutomjetit){
         this.llojiAutomjetit = llojiAutomjetit;
     }
 

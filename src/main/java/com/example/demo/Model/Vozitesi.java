@@ -15,21 +15,16 @@ public class Vozitesi {
     //key e kemi targat, value e kemi vozitesin
     Map<String,String> map = new HashMap<>();
 
-    Vozitesi(String emri, String mbiemri, String shtetsia, int nrL_Njoftimit){
+    public Vozitesi(String emri, String mbiemri, String shtetsia, int nrL_Njoftimit){
         this.emri=emri;
         this.mbiemri=mbiemri;
         this.shtetsia=shtetsia;
         this.nrL_Njoftimit=nrL_Njoftimit;
     }
-    //Singleton pattern
-    public static Vozitesi getInstance(){
-        if (vozitesi==null){
-            vozitesi=new Vozitesi("Isuf","Bajraktaraj","Kosovar",000000001);
-        }
-        return vozitesi;
-    }
 
+    //Vozitesi v=new Vozitesi(emri, mbiemri, shtetsia, nrL_Njoftimit);
 
+    //Get & Set
     public Map<String, String> getMap() {
         return map;
     }
@@ -37,17 +32,6 @@ public class Vozitesi {
     public void setMap(String targat,String emri) {
         this.map.put(targat,emri);
     }
-
-    public void maini(){
-        Automobili a = new Automobili();
-        Vozitesi v = new Vozitesi("Arlind","P","K",1);
-        setMap(a.getNrTargat(),v.emri);
-        Map m = getMap();
-    }
-
-    Vozitesi vozitesi=new Vozitesi(emri, mbiemri, shtetsia, nrL_Njoftimit);
-
-
 
     public ArrayList<Automobili> getAuto() {
         return auto;
@@ -89,14 +73,6 @@ public class Vozitesi {
         this.nrL_Njoftimit = nrL_Njoftimit;
     }
 
-    //metoda posedon kthen Emrin e vozitesit i cili posedon veturen ne baze te
-    //targave te dhena te dhena ne parameter
-    //ne DDD eshte i shenuar si posedon(int i):String
-    public String posedon(String targat){
-        automobili = new Automobili();
-        String a;
-        a = map.get(targat);
-        return a;
-    }
+
 
 }

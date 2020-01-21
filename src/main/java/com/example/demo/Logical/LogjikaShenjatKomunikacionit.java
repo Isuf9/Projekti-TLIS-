@@ -10,6 +10,8 @@ public class LogjikaShenjatKomunikacionit {
     public String emriShenjes;
     public String lloijshenjes;
     public String infoShtesShenja;
+
+
     public void factory(Rruga rr1){
         if (rr1.lloijRruges=="Ruale") {
 

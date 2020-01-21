@@ -35,8 +35,6 @@ public class LogjikaRruga implements Njoftimet{
 
 //Shtoj te dhenat ne databaze
     public String shtoRrugen(String emri, String vendi){
-        emri="emri";
-        vendi="vendi";
 
         return "Rruga"+emri+"ne "+ vendi+", u shtua me sukses!";
     }

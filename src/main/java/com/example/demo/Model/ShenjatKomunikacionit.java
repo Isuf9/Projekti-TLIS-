@@ -15,35 +15,6 @@ public class ShenjatKomunikacionit {
         this.id=id;
     }
 
-
-    public void shenjatRrugeRrurale(int Id){
-        System.out.println("Ju jeni ne duke ngasur ne nje rruge Rrurale");
-    }
-
-    public void shenjatRrugeLokale(int Id){
-        System.out.println("Ju jeni ne duke ngasur ne nje rruge ne Qytet");
-    }
-
-    public void shenjatRrugeAutostrade(int Id){
-        System.out.println("Ju jeni ne duke ngasur ne nje rruge ne autostrad");
-    }
-
-
-//    //Factory Patterni
-//    public void factoryPattern(ShenjatKomunikacionit sh){
-//        if (sh.id==1){
-//            sh.shenjatRrugeAutostrade(getId());
-//        }else if (sh.id==2){
-//            sh.shenjatRrugeLokale(getId());
-//        }else{
-//            sh.shenjatRrugeRrurale(getId());
-//     }
-
-
-  //  }
-
-
-
     public String getEmriShenjes() {
         return emriShenjes;
     }
@@ -74,6 +45,19 @@ public class ShenjatKomunikacionit {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+
+    public void shenjatRrugeRrurale(int Id){
+        System.out.println("Ju jeni ne duke ngasur ne nje rruge Rrurale");
+    }
+
+    public void shenjatRrugeLokale(int Id){
+        System.out.println("Ju jeni ne duke ngasur ne nje rruge ne Qytet");
+    }
+
+    public void shenjatRrugeAutostrade(int Id){
+        System.out.println("Ju jeni ne duke ngasur ne nje rruge ne autostrad");
     }
 
 }
