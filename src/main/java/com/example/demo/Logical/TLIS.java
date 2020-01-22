@@ -24,6 +24,8 @@ public class TLIS
 
 
        //Metodat nga moduli LogjikaAutomobili
+        String auto_1=automobili.toString();
+        System.out.println(auto_1);
        logjikaAutomobili.dedektimi(automobili, "03-672-FF");
        //tregon se qfar automjeti eshte(zyretar apo jozyrtar)
        logjikaAutomobili.klasifiko_automobilet(automobil_dyte,"3Z");
