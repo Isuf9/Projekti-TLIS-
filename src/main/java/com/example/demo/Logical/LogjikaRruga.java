@@ -16,9 +16,25 @@ public class LogjikaRruga implements Njoftimet{
     private Connection con;
     private Statement st;
     private ResultSet rs;
+    static   int max;
+    static ShenjatKomunikacionit[] shenjatKomunikacionit=new ShenjatKomunikacionit[10];
+    public String emriRruges;
+    public String lloijRruges;
+    private String gjendja;
+    public int ID_semaforit;
+    private int idRruges;
     Rruga rruga;
-    private int max;
-    private ShenjatKomunikacionit[] shenjatKomunikacionit=new ShenjatKomunikacionit[10];
+
+
+//    public LogjikaRruga(String emriRruges, String lloijRruges, String gjendja, int idRruges){
+//
+//        this.emriRruges=emriRruges;
+//        this.lloijRruges=lloijRruges;
+//        this.gjendja=gjendja;
+//        this.idRruges= idRruges;
+//
+//    }
+
     @Override
     public void connectToDB() {
         String connectionUrl = "jdbc:sqlserver://localhost:1433;" +
@@ -76,12 +92,7 @@ public class LogjikaRruga implements Njoftimet{
     //Ekziston nje gabim ne kete metode
     @Override
     public String vendnodhja(Rruga rr, int id) {
-        id=rruga.getIdRruges();
-        String s=rruga.getEmriRruges();
-        System.out.println(s);
-        if (id==rruga.getIdRruges()) {
-            return "Ju gjendeni ne rrugen:" + s;
-        }
+        String s=rr.getEmriRruges();
         return "Ju gjendeni ne rrugen:" + s;
     }
 }

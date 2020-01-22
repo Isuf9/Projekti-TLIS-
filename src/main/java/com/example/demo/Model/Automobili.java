@@ -1,4 +1,6 @@
 package com.example.demo.Model;
+import com.example.demo.Logical.LogjikaAutomobili;
+import com.example.demo.Logical.LogjikaVozitesi;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -11,13 +13,23 @@ public class Automobili {
     private String statusiAutomjetit;
     private int shpejtesia;
     private boolean isInInto;
+    LogjikaAutomobili logjikaAutomobili;
 
-    public Automobili(){
-
+    public  LogjikaAutomobili getInstance(){
+        if (logjikaAutomobili==null){
+            logjikaAutomobili=new LogjikaAutomobili();
+        }
+        return logjikaAutomobili;
     }
 
-    public Automobili(String llojiAutomjetit){
-        this.llojiAutomjetit = llojiAutomjetit;
+
+    public Automobili(String nrTargat, String llojiAutomjetit, String tipiAutomjetit, String statusiAutomjetit, int shpejtesia, boolean isInInto){
+            this.nrTargat=nrTargat;
+            this.llojiAutomjetit=llojiAutomjetit;
+            this.tipiAutomjetit=tipiAutomjetit;
+            this.statusiAutomjetit=statusiAutomjetit;
+            this.shpejtesia=shpejtesia;
+            this.isInInto=isInInto;
     }
 
     public String getNrTargat(){
@@ -76,8 +88,25 @@ public class Automobili {
         isInInto = inInto;
     }
 
-    public String posedon(String targa){
-        return "";
+    public String kugjendet(boolean isInInto){
+        if (isInInto==true){
+
+            String op1="eshte ne rruge";
+            return op1;
+        }else {
+            String op2 = "nuk eshte ne rruge";
+            return op2;
+        }
+
     }
+
+    public String toString(){
+
+        return "Ka: "+llojiAutomjetit+",me targat: "+nrTargat+", tipi: "+tipiAutomjetit+", gjendja e automjetit: "+statusiAutomjetit+", eshte duke ngasur"+shpejtesia+"/ore, "+kugjendet(true);
+    }
+
+//    public String posedon(String targa){
+//        return "";
+//    }
 
 }

@@ -21,27 +21,13 @@ public class LogjikaVozitesi {
         return l_vozitesi;
     }
 
-    //
-
-
-    public void setMap(String targat,String emri) {
-        this.map.put(targat,emri);
-    }
-
-    public void maini(){
-        Automobili a = new Automobili("Audi");
-        Vozitesi v = new Vozitesi("Arlind","P","K",1);
-        setMap(a.getNrTargat(),vozitesi.getEmri());
-        Map m = getMap();
-    }
     //metoda posedon kthen Emrin e vozitesit i cili posedon veturen ne baze te
     //targave te dhena te dhena ne parameter
     //ne DDD eshte i shenuar si posedon(int i):String
-    public String posedon(Automobili auto,String targat){
-        auto = new Automobili();
-        String a;
-        a = map.get(targat);
-        return a;
+    public String posedon(Automobili auto,Vozitesi v,String targat){
+          String emri=v.getEmri();
+
+        return emri+", posedon kete makine";
     }
 
 }
