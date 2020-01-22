@@ -1,8 +1,6 @@
 package com.example.demo.Model;
 
 public class ShenjatKomunikacionit {
-    private Rruga rr;
-    private ShenjatKomunikacionit sh;
     private int id;
     public String emriShenjes;
     public String lloijshenjes;
@@ -48,16 +46,13 @@ public class ShenjatKomunikacionit {
     }
 
 
-    public void shenjatRrugeRrurale(int Id){
-        System.out.println("Ju jeni ne duke ngasur ne nje rruge Rrurale");
-    }
+    public void shenjatRrugeRurale(int Id){ System.out.println("Ju jeni ne duke ngasur ne nje rruge Rurale");}
 
-    public void shenjatRrugeLokale(int Id){
-        System.out.println("Ju jeni ne duke ngasur ne nje rruge ne Qytet");
-    }
+    public void shenjatRrugeLokale(int Id){System.out.println("Ju jeni ne duke ngasur ne nje rruge Lokale");}
 
-    public void shenjatRrugeAutostrade(int Id){
-        System.out.println("Ju jeni ne duke ngasur ne nje rruge ne autostrad");
-    }
+    public void shenjatRrugeAutostrade(int Id){System.out.println("Ju jeni ne duke ngasur ne nje rruge Autostrad");}
 
+    public String toString(){
+        return "Emri shenjes: "+emriShenjes+", lloij shenjes"+lloijshenjes+", info shtes:"+infoShtesShenja;
+    }
 }

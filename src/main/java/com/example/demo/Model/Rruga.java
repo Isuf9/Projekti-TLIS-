@@ -59,12 +59,21 @@ public class Rruga {
         this.gjendja = gjendja;
     }
 
+    //Crud read
     public String getEmriRruges() {
         return emriRruges;
     }
 
+    //Crud Edit
     public void setEmriRruges(String emriRruges) {
         this.emriRruges = emriRruges;
+    }
+
+    //Crud delete
+    public void deleteEmriRruges(){
+        String s="";
+        this.emriRruges=s;
+        System.out.println("Emri i Rruges u fshi"+emriRruges);
     }
 
     public String getLloijRruges() {
@@ -88,6 +97,13 @@ public class Rruga {
 
     public void setIdRruges(int idRruges) {
         this.idRruges = idRruges; }
+
+
+      public String toString(){
+        return "Emri i rruges:"+emriRruges+", lloij i rruges:"+lloijRruges+", gjendja"+gjendja+", id:"+idRruges;
+      }
+
+
 
 
 }

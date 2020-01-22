@@ -1,4 +1,5 @@
 package com.example.demo.Logical;
+import com.example.demo.Model.Automobili;
 import com.example.demo.Model.Rruga;
 import com.example.demo.Model.ShenjatKomunikacionit;
 
@@ -16,8 +17,8 @@ public class LogjikaRruga implements Njoftimet{
     private Connection con;
     private Statement st;
     private ResultSet rs;
-    static   int max;
-    static ShenjatKomunikacionit[] shenjatKomunikacionit=new ShenjatKomunikacionit[10];
+    private    int max;
+    private ShenjatKomunikacionit[] shenjatKomunikacionit=new ShenjatKomunikacionit[10];
     public String emriRruges;
     public String lloijRruges;
     private String gjendja;
@@ -49,27 +50,16 @@ public class LogjikaRruga implements Njoftimet{
         }
     }
 
-//Shtoj te dhenat ne databaze
-    public String shtoRrugen(String emri, String vendi){
-
-        return "Rruga"+emri+"ne "+ vendi+", u shtua me sukses!";
-    }
-    //Tregon sa automjete gjende ne rrugen ABC
-    public int nrAutomjeteve(int count){
-
-        return count;
-    }
-
     @Override
     public void newInfo(int m) {
-        if (rruga.getMax()>m) {
+        if (max>m) {
 
             System.out.println("Nje njoftim i ri");
         }
-        else if (rruga.getMax()==m){
+        else if (max==m){
             System.out.println("Nuk keni nje njoftim te ri");
         }
-        m=rruga.getMax();
+        m=max;
     }
 
     @Override
@@ -88,11 +78,19 @@ public class LogjikaRruga implements Njoftimet{
         System.out.println(map.get(i));
     }
 
-
-    //Ekziston nje gabim ne kete metode
     @Override
-    public String vendnodhja(Rruga rr, int id) {
-        String s=rr.getEmriRruges();
+    public String vendnodhja(Automobili a, int id) {
+        String s=a.getLokacioni();
         return "Ju gjendeni ne rrugen:" + s;
+
     }
+
+    //CRUD FORMA
+    public void edit(Rruga r,String value){
+      r.setEmriRruges(value);
+    }
+    public void delete(Rruga r){
+        r.setEmriRruges(null);
+    }
+
 }

@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Automobili {
+    private String nrTargat_inicialet;
     private String nrTargat;
     private String llojiAutomjetit;
     private String tipiAutomjetit;
@@ -13,22 +14,16 @@ public class Automobili {
     private String statusiAutomjetit;
     private int shpejtesia;
     private boolean isInInto;
-    LogjikaAutomobili logjikaAutomobili;
+    private String lokacioni;
 
-    public  LogjikaAutomobili getInstance(){
-        if (logjikaAutomobili==null){
-            logjikaAutomobili=new LogjikaAutomobili();
-        }
-        return logjikaAutomobili;
-    }
-
-
-    public Automobili(String nrTargat, String llojiAutomjetit, String tipiAutomjetit, String statusiAutomjetit, int shpejtesia, boolean isInInto){
+    public Automobili(String nrTargat_inicialet,String nrTargat, String llojiAutomjetit, String tipiAutomjetit, String statusiAutomjetit, int shpejtesia,String lokacioni, boolean isInInto){
+            this.nrTargat_inicialet=nrTargat_inicialet;
             this.nrTargat=nrTargat;
             this.llojiAutomjetit=llojiAutomjetit;
             this.tipiAutomjetit=tipiAutomjetit;
             this.statusiAutomjetit=statusiAutomjetit;
             this.shpejtesia=shpejtesia;
+            this.lokacioni=lokacioni;
             this.isInInto=isInInto;
     }
 
@@ -88,6 +83,22 @@ public class Automobili {
         isInInto = inInto;
     }
 
+    public String getLokacioni() {
+        return lokacioni;
+    }
+
+    public void setLokacioni(String lokacioni) {
+        this.lokacioni = lokacioni;
+    }
+
+    public String getNrTargat_inicialet() {
+        return nrTargat_inicialet;
+    }
+
+    public void setNrTargat_inicialet(String nrTargat_inicialet) {
+        this.nrTargat_inicialet = nrTargat_inicialet;
+    }
+
     public String kugjendet(boolean isInInto){
         if (isInInto==true){
 
@@ -102,11 +113,7 @@ public class Automobili {
 
     public String toString(){
 
-        return "Ka: "+llojiAutomjetit+",me targat: "+nrTargat+", tipi: "+tipiAutomjetit+", gjendja e automjetit: "+statusiAutomjetit+", eshte duke ngasur"+shpejtesia+"/ore, "+kugjendet(true);
+        return "Ka: "+llojiAutomjetit+",me targat: "+nrTargat_inicialet+nrTargat+", tipi: "+tipiAutomjetit+", gjendja e automjetit: "+statusiAutomjetit+", eshte duke ngasur"+shpejtesia+"/ore, "+"lokacioni(ku gjendet), "+lokacioni+kugjendet(true);
     }
-
-//    public String posedon(String targa){
-//        return "";
-//    }
 
 }

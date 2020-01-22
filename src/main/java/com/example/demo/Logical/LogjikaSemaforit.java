@@ -25,8 +25,8 @@ public class LogjikaSemaforit implements KonfigurimiSemaforit{
 
     @Override
     public void yellow() throws InterruptedException {
-        System.out.print("Semafori: Verdhe");
-        for (int i = 7; i >= 0; i--) {
+        System.out.println("Semafori: Verdhe");
+        for (int i = 5; i >= 0; i--) {
             System.out.print(i);
             Thread.sleep(1000);
             System.out.print("\b\b");
