@@ -21,8 +21,7 @@ public class TLIS
         LogjikaAutomobili logjikaAutomobili=new LogjikaAutomobili();
         LogjikaSemaforit logjikaSemaforit=new LogjikaSemaforit();
         LogjikaShenjatKomunikacionit logjikaShenjatKomunikacionit=new LogjikaShenjatKomunikacionit();
-        String shfaqja_e_shenjave=logjikaShenjatKomunikacionit.toString();
-        //System.out.println(shfaqja_e_shenjave);
+
 
        //Metodat nga moduli LogjikaAutomobili
        logjikaAutomobili.dedektimi(automobili, "03-672-FF");
@@ -45,14 +44,23 @@ public class TLIS
        String vendodhja=logjikaRruga.vendnodhja(automobili,12);
        System.out.println(vendodhja);
        //Crud forma
+       //delete emri i rruges
        logjikaRruga.delete(rruga);
+       //edit emri i rruges(sa i perkete create veq eshte i deklaruar me lart(Rruga rruga=new Rruga("Imzot Nike Prela","Rurale","Ne rregull",12); ))
+       //kurse read e perdorim p.sh rruga.getEmriRruges().
        logjikaRruga.edit(rruga,"Agim Ramadani");
        System.out.println("Vazhdojn metodat nga moduli LogjikaShenjatKomunikacionit\n");
-        System.out.println("-----------------------------------------------------------------------");
+       System.out.println("-----------------------------------------------------------------------");
 
        //////////////////////////////////////////////////////////////////////////////
 
+        //Metodat tek moduli ShenjatKomunikacionit
+        //Shfaq nje objekt ne console
+        String toString=shenjatKomunikacionit.toString();
+        System.out.println(toString);
+        //krijon nje objekt ne baze te vleres qe e japim(p.sh values="Rurale")
         logjikaShenjatKomunikacionit.factory(rruga);
+        //tregon se ne qfar rruge jeni duke ngasur veturen(p.sh rruge Rurale)
         logjikaShenjatKomunikacionit.lloijRruges(shenjatKomunikacionit);
         System.out.println("Vazhdojn metodat nga moduli LogjikaVozitesi\n");
         System.out.println("-----------------------------------------------------------------------");
@@ -63,6 +71,7 @@ public class TLIS
         //metoda tregon se kush(emrin e pronarit) e permbane kete makin por duke i plotsuar kushtet(parametrat hyers)
         String posedon=logjikaVozitesi.posedon(automobili,vozitesi,"03-672-FF");
         System.out.println(posedon);
+        System.out.println("Vazhdojn metodat nga moduli LogjikaSemaforit\n");
         System.out.println("-----------------------------------------------------------------------");
 
 
@@ -73,7 +82,7 @@ public class TLIS
         logjikaSemaforit.run();
         //metoda shfaq gjendje e semaforit(ngjyra e kuq, jeshile(verdhe), gjelbert...)
         logjikaSemaforit.start();
-        System.out.println("Vazhdojn metodat nga moduli LogjikaSemaforit");
+        System.out.println("The end");
         System.out.println("-----------------------------------------------------------------------");
 
     }
